@@ -1,41 +1,46 @@
-caracteristicas_ia ={
- 'inteligencia':'elevada',
- 'rapidez':'no processamento',
- 'conhecimento':'amplo'
+caracteristicas_ia = {
+    'inteligencia': 'elevada',
+    'rapidez': 'no processamento',
+    'conhecimento': 'amplo'
 }
-print(caracteristicas_ia)
-#print('inteligencia')
-#print(caracteristicas_ia['inteligencia'])
-caracteristicas_unicornio ={
- 'magia':'poderosa',
- 'beleza':'deslumbrante',
- 'forca':'mistica'
-}
-print(caracteristicas_unicornio)
 
-#uniao dos dois dicionarios 
-conjunto_ia = set(caracteristicas_ia)
-conjunto_unicornio=set(caracteristicas_unicornio)
+caracteristicas_unicornio = {
+    'magia': 'poderosa',
+    'beleza': 'deslumbrante',
+    'forca': 'mistica'
+}
+
+# União dos dois dicionários
+#usar keys para acessar as chaves dos dicionarios e converter em conjuntos
+conjunto_ia = set(caracteristicas_ia.keys())
+conjunto_unicornio = set(caracteristicas_unicornio.keys())
+
 print('----------------')
-print('conjuntos ia e unicornio')
+print('Conjuntos IA e Unicornio')
 print(conjunto_ia)
 print(conjunto_unicornio)
-print('uniao com ia e unicornio ')
+
 uniao = conjunto_ia.union(conjunto_unicornio)
-print(uniao)
+
+# Criar um dicionário com a união
 uniao_dict = {
-   'uniao':uniao,
-   'nome':'Growth specialist at NuvemShop'
+    'uniao': uniao,
+    'nome': 'Growth specialist at NuvemShop'
 }
+
+print('União com IA e Unicornio:')
+print(uniao)
+
+print('Dicionário de União:')
 print(uniao_dict)
+
 for key, value in uniao_dict.items():
-    if key=='uniao' or  key=='nome':
+    if key == 'uniao' or key == 'nome':
         print('------------------')
         print(f'{key}: {value}')
-        
     else:
         print('------------------------------')
-        print('a entidade e caracteristicas sao diferentes')
-        break 
-    
+        print('A entidade e características são diferentes')
+        break
+
     
